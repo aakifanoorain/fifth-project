@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>duolingo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Signika Negative", sans-serif;
+            font-optical-sizing: auto;
+
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 2rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+    </style>
+    <link href="sample.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-color: white;" aria-label="Offcanvas navbar large">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/557e9cb1ce105779cdb5.svg" alt="logo"
+                    class="_22yf5"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="taking.html">
+                        <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/557e9cb1ce105779cdb5.svg"
+                            alt="logo" class="_22yf5"></a>
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="taking.html">Taking the Test</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Accepting.html">Accepting the Test</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="testresearch.html">Test Research</a>
+                        </li>
+                        <div class="col-md-3 text-end">
+                            <button type="button" class="btn btn-outline-warning" style="color: darkblue;"><a
+                                    href="login.html" style="text-decoration: none;">Login</a></button>
+                            <button type="button" class="btn btn-dark"><a href="singup.html"
+                                    style="text-decoration: none; color: orange">Sign-up</a></button>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container marketing">
+
+            <div class="row featurette" style="padding-top: 7rem;">
+                <div class="col-md-6">
+                    <h4 class="featurette-heading fw-normal lh-1" style="color: rgb(30, 30, 61) ">
+                        <b>Hear from students around the world</b>
+                    </h4>
+                    <p class="lead">
+                        Applying to higher education can be daunting, especially in another country. Hear from other
+                        students who went through the process and how the Duolingo English Test helped make it easier.
+                    </p>
+                    <button type="button" class="btn btn-dark" style="color: rgb(206, 202, 5);width:10rem;"><b>GET
+                            STARTED</b></button>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/08fecd41858c5871c529.svg" alt=""
+                        style="width: 100%; height:100%;">
+                </div>
+            </div>
+
+            <div class="img" style="padding-bottom: 20px; display: flex; align-items: center; justify-content: center;"
+                ;>
+                <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/0e0a6a95a2d2cbfd1e37.svg" alt="">
+            </div>
+            <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
+                <main class="px-3">
+
+                    <div class="im1">
+                        <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/530bd8e3902cb47c1de5.svg"
+                            alt="">
+                    </div>
+                    <h3 style="color: rgb(30, 30, 61) "> <b>In their own words</b></h3>
+                    <p class="lead">We talked to students who took the Duolingo English Test on their path to higher
+                        education. <br> These are their stories.</p>
+                </main>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+
+                        <iframe height="360" src="https://www.youtube.com/embed/Qt2HG-u9KYY?&amp;autoplay=0"
+                            title="Yein" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="" class="_1jKen" style="width: 100%;"></iframe>
+
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="color: rgb(30, 30, 61) "> <b>Yein</b></h5>
+                            <p class="card3 text-center">University of Pennsylvania</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <iframe height="360" src="https://www.youtube.com/embed/Tn1HQy2Byl8?&amp;autoplay=0"
+                            title="Scott" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="" class="_1jKen" style="width: 100%;"></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="color: rgb(30, 30, 61) "><b>Scott</b></h5>
+                            <p class="card3 text-center">Georgia Institute of Technology</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <iframe height="360" padding="12px"
+                            src="https://www.youtube.com/embed/NqKNsoNlt-o?&amp;autoplay=0" title="Serena"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="" class="_1jKen" style="width: 100%;"></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="color: rgb(30, 30, 61) "><b>Serena</b></h5>
+                            <p class="card3 text-center">Barnard College</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <iframe height="360" src="https://www.youtube.com/embed/wlz3k7Ca-M0?&amp;autoplay=0"
+                            title="Franck" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="" class="_1jKen" style="width: 100%;"></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title text-center" style="color: rgb(30, 30, 61) "><b>Franck</b></h5>
+                            <p class="card3 text-center">
+                                Columbia University</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
+            <main class="px-3">
+                <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/25b90ee17d96d20b6572.svg" alt="">
+                <h5 style="color:rgb(37, 37, 88) ;"> <b>Blog posts</b></h5>
+                <p>Visit our blog to learn more.</p>
+            </main>
+        </div>
+        <hr class="featurette-divider">
+        <div class="container">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h4 style="color: rgb(30, 30, 61) "><b>Real students share their advice for studying abroad
+                            in English</b></h4>
+                    <div class="cf">
+                        <div class="cfphoto ">
+                            <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/14695a1f068305bb8cc4.png"
+                                alt="" class="imagecf">
+                        </div>
+                        <div class="cfbody">
+                            <h5 class="nameofcf" style="color: rgb(30, 30, 61) ">Caroline Fisher</h5>
+                            <p class="dateofcf">September 17, 2021</p>
+                        </div>
+                    </div>
+                    <p>At Duolingo we recognize that while talent is equally distributed around
+                        the world,
+                        opportunities
+                        are not. Our mission is to eliminate barriers to education, and no population faces more
+                        barriers than refugees, the most underserved population in education by far.</p>
+
+                </div>
+                <div class="col-md-5 order-md-1 ">
+                    <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/2c8019b41c0bd4c26730.svg" alt=""
+                        style="width: 100%;">
+                </div>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="container">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h4 style="color: rgb(30, 30, 61) "><b>Young people want to work and study abroad—but testing makes
+                            it difficult </b></h4>
+                    <div class="cf">
+                        <div class="cfphoto ">
+                            <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/331805b5a9b0d1cc5fe4.png"
+                                alt="" class="imagecf">
+                            <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/51b1bdb7ee348d6a2c03.png"
+                                alt="">
+                        </div>
+                        <div class="cfbody">
+                            <h5 class="nameofcf" style="color: rgb(30, 30, 61) ">Sophie Wodzak and Tamsin Thomas</h5>
+                            <p class="dateofcf"> May 11, 2022</p>
+                        </div>
+                    </div>
+                    <p >The pandemic has forever altered how we approach learning, at every level
+                        of education. But how has it affected how talented young people feel about studying and working
+                        overseas? How do they feel about the proficiency tests needed for applying to international
+                        study or work opportunities? The Duolingo English Test team was particularly interested in the
+                        perspective of young people migrating to the UK and partnered with Public First to learn more.
+                        We polled more than 1,900 students in China and India and learned more about what they hope to
+                        gain from international study and work, as well as the obstacles they face when applying for
+                        opportunities abroad.</p>
+
+                </div>
+                <div class="col-md-5 order-md-1 ">
+                    <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/685fac7d863e3cbbe02c.svg" alt=""
+                        style="width: 100%;">
+                </div>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="container">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h4 style="color: rgb(30, 30, 61) "><b>International education trends via the world's most
+                            accessible English test</b></h4>
+                    <div class="cf">
+                        <div class="cfphoto ">
+                            <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/1f037974fd51b9277d36.png"
+                                alt="" class="imagecf">
+                            <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/3e7d31efd4b01ee87bd5.png"
+                                alt="">
+                        </div>
+                        <div class="cfbody">
+                            <h5 class="nameofcf" style="color: rgb(30, 30, 61) ">Mark Pavic and Jennifer Dewar
+                            </h5>
+                            <p class="dateofcf"> May 6, 2021</p>
+                        </div>
+                    </div>
+                    <p>We launched the Duolingo English Test in 2016 with a mission to use
+                        technology to lower barriers to higher education for students everywhere. As we reflect on our
+                        five year journey, we are proud that our original mission endures. Delivering a secure
+                        assessment any time, anywhere in the world for $49, was once a North Star goal; today, with
+                        hundreds of thousands of test takers and over 3,000 accepting institutions, it's clear the
+                        Duolingo English Test has made an impact on access to higher education. We lead the testing
+                        industry in implementing technology that is student-centered and provides more timely results
+                        for institutions—all while remaining reliable and secure.</p>
+
+                </div>
+                <div class="col-md-5 order-md-1 ">
+                    <img src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/f78df02bb45f6558e3b4.svg" alt=""
+                        style="width: 100%;">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <hr class="featurette-divider">
+
+
+        <div class="container">
+            <footer class="py-5">
+                <div class="row" style="color: rgb(37, 37, 83);">
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Taking the Test</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Overview</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Accepting
+                                    Institutions</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> Student
+                                    Stories</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Prepare</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> Official
+                                    Test Guide</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">
+                                    Resources</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">
+                                    Accommodations</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> Practice
+                                    Free</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> Purchase
+                                    the Test</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Test research</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">
+                                    Overview</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">
+                                    Publications</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Standards</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> Our
+                                    Team</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> Grants
+                                    and Awards</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Help & Support</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">
+                                    Help Center</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">
+                                    Terms</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Standards</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">
+                                    Privacy</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">
+                                    Whistleblower Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form>
+                            <div class="footers">
+
+                                <img src="	https://dy8n3onijof8f.cloudfront.net/static/images/wp/557e9cb1ce105779cdb5.svg"
+                                    alt="">
+
+                            </div>
+                            <hr>
+
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">English</label>
+                                <input id="newsletter1" type="text" class="form-control" placeholder="English...">
+                                <button class="btn btn-primary" type="button">Site language</button>
+                            </div>
+                            <hr>
+                            <div class="_1QbJw"
+                                style="display:flex; justify-content: space-between; text-decoration: none;">
+                                <div class="g0J_g"><img
+                                        src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/7dc94e8da52862112cf5.svg"
+                                        alt="YouTube" class="Ncuqu"><a class="_3cT1j _2_IcM"
+                                        href="https://www.youtube.com/c/DuolingoEnglishTest" target="_blank"
+                                        rel="noopener noreferrer" data-bypass="true"></a></div>
+                                <div class="g0J_g"><img
+                                        src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/9d51246d207d8fb680cb.svg"
+                                        alt="LinkedIn" class="Ncuqu"><a class="_3cT1j _2_IcM"
+                                        href="https://www.linkedin.com/company/duolingo-english-test-/" target="_blank"
+                                        rel="noopener noreferrer" data-bypass="true"></a>
+                                </div>
+                                <div class="g0J_g"><img
+                                        src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/189749344f97b6b46dc9.svg"
+                                        alt="Twitter" class="Ncuqu"><a class="_3cT1j _2_IcM"
+                                        href="https://twitter.com/duolingoentest" target="_blank"
+                                        rel="noopener noreferrer" data-bypass="true"></a></div>
+                                <div class="g0J_g"><img
+                                        src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/04e779ccd280d7cf731f.svg"
+                                        alt="Facebook" class="Ncuqu"><a class="_3cT1j _2_IcM"
+                                        href="https://www.facebook.com/duolingoenglishtest/" target="_blank"
+                                        rel="noopener noreferrer" data-bypass="true"></a></div>
+                                <div class="g0J_g"><img
+                                        src="https://dy8n3onijof8f.cloudfront.net/static/images/wp/b5faa850eeae8408ff66.svg"
+                                        alt="Instagram" class="Ncuqu"><a class="_3cT1j _2_IcM"
+                                        href="https://www.instagram.com/duolingoenglishtest/" target="_blank"
+                                        rel="noopener noreferrer" data-bypass="true"></a></div>
+                            </div>
+
+                            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                                <p>©2023 Duolingo</p>
+                                <ul class="list-unstyled d-flex">
+                                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24"
+                                                height="24">
+                                                <use xlink:href="#twitter"></use>
+                                            </svg></a></li>
+                                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24"
+                                                height="24">
+                                                <use xlink:href="#instagram"></use>
+                                            </svg></a></li>
+                                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24"
+                                                height="24">
+                                                <use xlink:href="#facebook"></use>
+                                            </svg></a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </footer>
+        </div>
+
+
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+</body>
